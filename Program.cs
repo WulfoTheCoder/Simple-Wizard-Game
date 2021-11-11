@@ -33,7 +33,6 @@ namespace CS_Project {
             if(!foundSplType) {
                 throw new Exception("Invalid Spell Type!");
             }
-
         }
     }
 
@@ -115,6 +114,7 @@ namespace CS_Project {
         }
 
         public void Attack(Wizard defender, Spell spellAgainst) {
+            if (defender == this) throw new Exception("Wizards cannot attack themselves. If you want for wizards to cast spells on themselves use the CastSpell() method!");
             if(currentSpellSlots > 0) {
                 defender.GetCasted(spellAgainst, this);
                 if(defender.health <= 0 && !defender.dead) {
@@ -122,6 +122,15 @@ namespace CS_Project {
                 }
                 currentSpellSlots--;
             }
+        }
+
+        public void GainSlot() {
+            spellSlots++;
+            currentSpellSlots++;
+        }
+
+        public void GainSpell(Spell spell_) {
+            spells.Add(spell_);
         }
 
         public void Die() {
@@ -141,15 +150,18 @@ namespace CS_Project {
 
                 // Create custom wizards with the list of available spells for them
                 Wizard wizard01 = new Wizard("Parry Hopper", new List<Spell>{abrakadabra, unexpectoPatronum, reparo, someHealingSpell}, 4);
-                Wizard wizard02 = new Wizard("Marry Jopper", new List<Spell>{reparo}, 1);
+                Wizard wizard02 = new Wizard("Marry Jopper", new List<Spell>{someHealingSpell, unexpectoPatronum}, 2);
                 
                 // Make them fight
                 wizard01.Attack(wizard02, unexpectoPatronum);
-                wizard01.Attack(wizard02, someHealingSpell);
-                wizard01.Attack(wizard02, abrakadabra);
-
-                // Make your wizard cast spells
-                wizard01.CastSpell(abrakadabra);
+                wizard02.CastSpell(someHealingSpell);
+                wizard02.Attack(wizard01, unexpectoPatronum);
+                wizard02.Attack(wizard01, unexpectoPatronum);
+                wizard02.Meditate();
+                wizard02.GainSlot();
+                wizard01.Attack(wizard02, unexpectoPatronum);
+                wizard02.CastSpell(someHealingSpell);
+                wizard01.Attack(wizard02, unexpectoPatronum);
             } catch(Exception e) {
                 Console.WriteLine(e.Message);
             }

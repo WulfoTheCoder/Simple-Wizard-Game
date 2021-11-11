@@ -13,3 +13,18 @@ C:\Users\Filip Grujic\Desktop\C# project\obj\Debug\net6.0\C# project.dll
 C:\Users\Filip Grujic\Desktop\C# project\obj\Debug\net6.0\ref\C# project.dll
 C:\Users\Filip Grujic\Desktop\C# project\obj\Debug\net6.0\C# project.pdb
 C:\Users\Filip Grujic\Desktop\C# project\obj\Debug\net6.0\C# project.genruntimeconfig.cache
+C:\C#\Wizard Game\bin\Debug\net6.0\C# project.exe
+C:\C#\Wizard Game\bin\Debug\net6.0\C# project.deps.json
+C:\C#\Wizard Game\bin\Debug\net6.0\C# project.runtimeconfig.json
+C:\C#\Wizard Game\bin\Debug\net6.0\C# project.dll
+C:\C#\Wizard Game\bin\Debug\net6.0\ref\C# project.dll
+C:\C#\Wizard Game\bin\Debug\net6.0\C# project.pdb
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.csproj.AssemblyReference.cache
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.AssemblyInfoInputs.cache
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.AssemblyInfo.cs
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.csproj.CoreCompileInputs.cache
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.dll
+C:\C#\Wizard Game\obj\Debug\net6.0\ref\C# project.dll
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.pdb
+C:\C#\Wizard Game\obj\Debug\net6.0\C# project.genruntimeconfig.cache
