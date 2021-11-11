@@ -133,6 +133,8 @@ namespace CS_Project {
         public void GainSpell(Spell spell_) {
             spells.Add(spell_);
             Console.WriteLine(name + " just gained " + spell_.name);
+
+            // LINE HERE JUST FOR COMMIT TESTING
         }
 
         public void Die() {
