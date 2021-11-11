@@ -127,10 +127,12 @@ namespace CS_Project {
         public void GainSlot() {
             spellSlots++;
             currentSpellSlots++;
+            Console.WriteLine(name + " just gained 1 more spell slot!");
         }
 
         public void GainSpell(Spell spell_) {
             spells.Add(spell_);
+            Console.WriteLine(name + " just gained " + spell_.name);
         }
 
         public void Die() {
