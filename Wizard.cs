@@ -83,7 +83,7 @@ namespace WizardSimulator {
             if(currentSpellSlots > 0) {
                 defender.GetCasted(spellAgainst, this);
                 if(defender.health <= 0 && !defender.dead) {
-                    defender.Die();
+                    defender.Die(this);
                 }
                 currentSpellSlots--;
             }
@@ -102,8 +102,11 @@ namespace WizardSimulator {
             } else throw new Exception("Spell count out of range!");
         }
 
-        public void Die() {
-            Console.WriteLine(name + " died!");
+        public void Die(Wizard wiz=null) {
+            if(wiz == null)
+                Console.WriteLine(name + " died!");
+            else
+                Console.WriteLine(name + " died trough the hands of " + wiz.name + "!");
             dead = true;
         }
     }
