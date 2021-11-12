@@ -96,8 +96,10 @@ namespace WizardSimulator {
         }
 
         public void GainSpell(Spell spell_) {
-            spells.Add(spell_);
-            Console.WriteLine(name + " just gained " + spell_.name);
+            if(spellSlots > spells.Count) {
+                spells.Add(spell_);
+                Console.WriteLine(name + " just gained " + spell_.name);
+            } else throw new Exception("Spell count out of range!");
         }
 
         public void Die() {
